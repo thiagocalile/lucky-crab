@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://d372fcx326kot"]
+
+[ext_resource type="Texture2D" uid="uid://dkcoa3nvil02g" path="res://art/white_circle.png" id="1_v7oki"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8qja"]
+radius = 13.038404
+
+[node name="Bullet" type="Bullet"]
+collision_layer = 4
+gravity_scale = 0.0
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v8qja")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-13, -13, 26, 26)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_v7oki")
